@@ -1,0 +1,20 @@
+.small_box{
+    height: 45px;
+    width: 200px;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.big_box{
+    height: 120px;
+    width: 480px;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 100px;
+    font-size: 20px;
+}
+h1{
+    margin: 15px 80px;
+}
