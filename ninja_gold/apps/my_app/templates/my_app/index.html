@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'my_app/css/index.css' %}">
+</head>
+<body>
+    
+    <h3>Your Gold: {{request.session.gold}}</h3>
+    <form action="/process_money/farm" method = "post">
+        {%csrf_token%}    
+        <h2>Farm</h2>
+        <input name="farm" type="submit" value="Find Gold!">
+    </form>
+    <form action="/process_money/cave" method="post">
+        {%csrf_token%}
+        <h2>Cave</h2>
+        <input name="cave" type="submit" value="Find Gold!">
+    </form>
+    <form action="/process_money/house" method="post">
+        {%csrf_token%}
+        <h2>House</h2>
+        <input name="house" type="submit" value="Find Gold!">
+    </form>
+    <form action="/process_money/casino" method="post">
+        {%csrf_token%}
+        <h2>Casino</h2>
+        <input name="casino" type="submit" value="Find Gold!">
+    </form>
+    <a href="/reset">reset</a>
+    <p>Activities:</p><br>
+    <div id="log">
+        {% for event in request.session.log %}
+            <p class="{{event.0}}">{{event.1}}</p>
+        {% endfor %}    
+    </div>
+</body>
+</html>

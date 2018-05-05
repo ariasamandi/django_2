@@ -1,0 +1,10 @@
+.loss{
+    color: red;
+}
+.gain{
+    color: green;
+}
+#log{
+    height: 200px;
+    overflow: scroll;
+}
