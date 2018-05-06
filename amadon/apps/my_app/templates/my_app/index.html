@@ -19,7 +19,7 @@
             <td>Dojo Tshirt</td>
             <td>$19.99</td>
             <td>
-                <form action='/checkout' method='post'>
+                <form action='/process/tshirt' method='post'>
                     {% csrf_token %}
                     <select name='quantity'>
                         <option>1</option>
@@ -35,7 +35,7 @@
             <td>Dojo Sweater</td>
             <td>$29.99</td>
             <td>
-                <form action='/checkout' method='post'>
+                <form action='/process/sweater' method='post'>
                     {% csrf_token %}
                     <select name='quantity'>
                         <option>1</option>
@@ -51,7 +51,7 @@
             <td>Dojo Cup</td>
             <td>$4.99</td>
             <td>
-                <form action='/amadon/buy' method='post'>
+                <form action='/process/cup' method='post'>
                     {% csrf_token %}
                     <select name='quantity'>
                         <option>1</option>
@@ -67,7 +67,7 @@
             <td>Algorithm Book</td>
             <td>$49.99</td>
             <td>
-                <form action='/amadon/buy' method='post'>
+                <form action='/process/book' method='post'>
                     {% csrf_token %}
                     <select name='quantity'>
                         <option>1</option>
