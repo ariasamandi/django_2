@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Thank you for your business!</h1>
-    <h4>We charged your credit card for</h4><br>
+    <h4>We charged your credit card for ${{request.session.price}}</h4><br>
     <br>
-    <h4>You have ordered {{}} items so far and spent {{}} with Amadon.com!</h4><br><br>
+    <h4>You have ordered {{request.session.item}} items so far and spent ${{request.session.total}} with Amadon.com!</h4><br><br>
     <a href="/">Go back</a>
 </body>
 </html>

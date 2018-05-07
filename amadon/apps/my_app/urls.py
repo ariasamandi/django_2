@@ -4,5 +4,6 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^process/(?P<item>\w+)$', views.process),
     url(r'^checkout$', views.checkout),
+    url(r'^reset$', views.reset),
 
 ]
